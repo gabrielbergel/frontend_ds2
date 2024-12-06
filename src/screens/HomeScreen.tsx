@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { HomeScreenNavigationProp } from '../types';
 
@@ -22,6 +22,10 @@ const HomeScreen = () => {
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('AllPontos')}>
         <Text style={styles.buttonText}>Ver Todos os Pontos</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Relatorios')}>
+        <Text style={styles.buttonText}>Ver Relatórios</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -32,26 +36,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#f0f0f0', // Cor de fundo mais suave
+    backgroundColor: '#f0f0f0', 
   },
   title: {
     fontSize: 24,
     marginBottom: 30,
-    fontWeight: 'bold', // Negrito para o título
-    textAlign: 'center', // Centraliza o texto
+    fontWeight: 'bold',
+    textAlign: 'center', 
   },
   button: {
-    backgroundColor: '#6200ee', // Cor de fundo do botão
+    backgroundColor: '#6200ee',
     padding: 15,
     borderRadius: 5,
     marginVertical: 10,
-    width: '80%', // Largura do botão
-    alignItems: 'center', // Centraliza o texto dentro do botão
+    width: '80%', 
+    alignItems: 'center',
   },
   buttonText: {
-    color: '#ffffff', // Cor do texto do botão
+    color: '#ffffff', 
     fontSize: 18,
-    fontWeight: 'bold', // Negrito para o texto do botão
+    fontWeight: 'bold', 
   },
 });
 
